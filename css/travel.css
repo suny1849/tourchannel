@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import url("default.css");
+
+
+
+#title{
+	margin-bottom: 56px;
+}
+
+
+
+#photoArea{
+	width:1152px;
+	position: relative; 
+	margin-top: 45px;
+	font-size: 13px;
+}
+
+#bigPhoto{
+	float: left;
+	margin-right: 20px;
+}
+
+#bigPhoto p{
+	color: #554634;
+}
+
+#photoArea ul li{
+	float: left;
+	margin: 0 20px 10px 0;
+	color: #554634;
+}
+
+#photoArea ul li.none_margin_right{
+	margin-right: 0px;
+}
+
+#photoArea ul{
+	float: left;
+}
+
+#photoArea img{
+	margin-bottom: 8px;
+}
+
+strong{
+	font-size: 15px;
+	font-family: "Helvetica-Black", "맑은고딕", "돋움";
+	color: #554634;
+}
+
+#photoNav{
+	position: absolute;
+	left: 475px;
+	top: 350px;
+}

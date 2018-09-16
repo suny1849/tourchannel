@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+ul{
+	list-style: none;
+}
+
+
+#logo{
+	float: left;
+	margin: 21px 53px 0 54px;
+}
+
+#gnb ul li{
+	float: left;
+	margin-top: 21px;
+	margin-right: 27px;
+}
+
+#snb{
+	float: left;
+	margin-left: 15px;
+}
+
+#snb ul li{
+	float: left;
+	margin-top: 21px;
+	margin-right: 13px;
+}
+
+#logoKor{
+	float: right;
+	margin-right: 30px;
+	margin-top: 8px;
+}

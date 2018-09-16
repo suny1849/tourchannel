@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+#bodyer {
+	background:url("../images/bg_america.png") top left no-repeat;
+}
+
+a{
+  color: #554634;	
+}

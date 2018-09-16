@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+* {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+#popup{
+	background: url("../images/popup_bg.png") top left no-repeat;
+	width: 480px;
+	height: 546px;
+}
+
+#btn_close{
+	position: absolute;
+	left: 435px;
+	top: 14px;
+}
+
+#writer{
+	margin: 163px 0 0 90px;
+	width: 180px;
+	height: 23px;
+}
+
+#content{
+	width: 360px;
+	height: 215px;
+	margin: 20px 0 0 90px;
+	overflow-x:hidden; overflow-y:auto;
+}
+
+.borderStyle{
+	background: #e5dcd1;
+	border: 1px solid #b8b29d;
+}
+
+#cancel{
+	margin: 40px 10px 0px 170px;
+}
+
+#question{
+	margin-top: 40px;
+}
+
+a{
+	outline: none; /*버튼클릭시 점선테두리 제거*/
+	text-decoration:none;
+}

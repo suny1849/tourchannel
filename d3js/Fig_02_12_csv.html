@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>D3 in Action Chapter 2 - Example 1</title>
+	<meta charset="utf-8" />
+	<script src="./js/d3.min.js" type="text/JavaScript"></script>
+	<!-- script src="./js/d3.v3.min.js" type="text/JavaScript"></script -->
+</head>
+<style>
+</style>
+<body>
+<svg>
+
+</svg>
+</body>
+<footer>
+<script>
+d3.csv("cities.csv", function(error,data) {dataViz(data)});
+
+function dataViz(incomingData) {
+	var maxPopulation = d3.max(incomingData, function(el) {
+		return parseInt(el.population);
+	});
+
+	var yScale = d3.scaleLinear().domain([0,maxPopulation]).range([0,460]);
+
+	d3.select("svg").attr("style","height:480px;withd:600px;");
+	d3.select("svg")
+	  .selectAll("rect")
+	  .data(incomingData)
+	  .enter()
+	  .append("rect")
+	  .attr("width", 20)
+	  .attr("height", function(d) {return yScale(parseInt(d.population));})
+	  .attr("x", function(d,i) {return i * 30;})
+	  .attr("y", function(d) {return 480 - yScale(parseInt(d.population));})
+	  .style("fill", "blue")
+	  .style("stroke", "red")
+	  .style("stroke-width", "1px")
+	  .style("opacity", .25);
+ }
+</script>
+</footer>
+</html>

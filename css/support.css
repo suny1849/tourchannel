@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import url("default.css");
+
+
+#bodyer {
+	background:url("../images/bg_support.png") top left no-repeat;
+
+}
+
+#title{
+	margin-bottom: 56px;
+}
+
+#box{
+	margin-top: 43px;
+	margin-bottom: 42px;
+}
+
+#qna{
+	float: left;
+	width: 643px;
+	margin-right: 40px;
+}
+
+#qna #btn_q{
+	float: right;
+}
+
+#qna #qnaTitle, #faqTitle{
+	margin-bottom: 30px;
+}
+
+#qanTable#id{
+	font-weight: bold;
+}
+
+
+#faq{
+	float: left;
+	width: 330px;
+}
+
+.idNum{
+	width: 20px;
+}
+
+#date{
+	width: 30px;
+}
+
+
+/* Q&A page */
+
+#qnaBox{
+	width: 100%;
+	height: 38px;
+	background-color: #b09e86;
+	margin-top: 43px;
+}
+
+#qnaBox #qnaTitle{
+	margin: 10px 0 0 10px;
+}
+
+#qnaBtn{
+	float: right;
+	margin: 7px 10px 0 0;
+}
+
+.userName{
+	width: 60px;
+}

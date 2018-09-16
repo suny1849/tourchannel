@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>D3 in Action Chapter 2 - Example 1</title>
+	<meta charset="utf-8" />
+	<script src="./js/d3.min.js" type="text/JavaScript"></script>
+	<!-- script src="./js/d3.v3.min.js" type="text/JavaScript"></script -->
+</head>
+<style>
+</style>
+<body>
+<svg>
+
+</svg>
+</body>
+<footer>
+<script>
+d3.json("tweets.json", function(error,data) {dataViz(data.tweets)});
+
+function dataViz(incomingData) {
+
+	var nestedTweets = d3.nest().key(function(el) {return el.user;}).entries(incomingData);
+
+	nestedTweets.forEach(function(el) {
+		el.numTweets = el.values.length;
+	})
+
+	var maxTweets = d3.max(nestedTweets, function(el) {return el.numTweets;});
+	var yScale = d3.scaleLinear().domain([0,maxTweets]).range([0,100]);
+
+	d3.select("svg").attr("style","height:480px;withd:600px;");
+	d3.select("svg")
+	  .selectAll("rect")
+	  .data(nestedTweets)
+	  .enter()
+	  .append("rect")
+	  .attr("width", 30)
+	  .attr("height", function(d) {return yScale(d.numTweets);})
+	  .attr("x", function(d,i) {return i * 40;})
+	  .attr("y", function(d) {return 100 - yScale(d.numTweets);})
+	  .style("fill", "blue")
+	  .style("stroke", "red")
+	  .style("stroke-width", "1px")
+	  .style("opacity", .25);
+ }
+</script>
+</footer>
+</html>

@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/*@font-face {font-family: "나눔명조"; src:url("../font/NanumMyeongjo.eot");}*/
+
+@font-face {
+
+  font-family: "나눔명조";
+  src:url("../font/NanumMyeongjo.eot");
+  src:local('☺').url('../font/NanumMyeongjo.woff')format("woff"),
+      url('../font/NanumMyeongjo.ttf')format("truetype");
+}
+
+
+
+* {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+body{
+	background-color: #cccccc;
+}
+
+
+table{
+	border-collapse:collapse;	/*border 사이의 간격없앰*/
+	border-top: 1px solid #b8b29d;
+	font-size: 12px;
+	width: 100%;
+}
+
+table th, td{
+	margin: 0;
+	padding: 12px;
+}
+
+td{
+	background-color:#f2e7dd;
+	border-bottom: 1px solid #b8b29d;
+	color: #4c4236;
+}
+
+
+a{
+	outline: none; /*버튼클릭시 점선테두리 제거*/
+	text-decoration:none;
+}
+
+/* 레이아웃 */
+#wrap {
+	width:1152px;
+	height:864px;
+	overflow:hidden;
+	margin:0 auto;
+}
+
+#header {
+	height:70px;
+	background:url("../images/bg_header.png") top left no-repeat;
+	border-bottom:10px solid #000;
+}
+
+#bodyer {
+	height:620px;
+	padding:57px 0;
+	font-family: "맑은고딕", "돋움", Dotum;
+}
+
+#content {
+	width:1024px;
+	/*height:620px;*/
+	height: 100%;
+	margin:0 auto;
+	overflow:hidden;
+	position: relative;
+}
+
+#footer {
+	height:50px;
+	background-color:#807067;
+}
+
+/* 공통클래스 */
+
+.none_margin_right {
+	margin-right: 0px;
+}
+
+.path{
+	position: absolute;
+	font-size: 10px;
+	color: #9f8064;
+	right: 0px;
+}
+
+.fontBasic{
+	font-weight: bold;
+	color: #665745;
+}
+
+.fontSmall_13px{
+	font-size: 13px;
+	color: #73695d;
+	line-height: 20px;
+	letter-spacing: -2px;
+}
+
+.fontSmall_12px{
+	font-size: 12px;
+	color: #7e766d;
+	line-height: 20px;
+	letter-spacing: -1px;
+}
+
+.fontLnb_off{
+	font-weight: bold;
+	color: #665745;
+	font-size: 13px;
+	letter-spacing: -1px;
+}
+
+.fontLnb_on{
+	font-weight: bold;
+	color: #df3b26;
+	font-size: 13px;
+	letter-spacing: -1px;
+}
+
+
+.priceBig{
+	font-size: 25px;
+	font-family: Verdana, "맑은고딕", "돋움", Dotum;
+}
+
+.listStyleDisc{
+	list-style: disc;
+}
+
+.floatR{
+	float: Right;
+}
+
+.center{
+	text-align: center;
+}
+
+.hidden{
+	display:none;
+}
+
+.clear{
+	float: none;
+	clear:both;
+	width:0;
+	height:0;
+}
+
+
+.bold{
+	font-weight: bold;
+}
+
+
+.hand {cursor:pointer;}
