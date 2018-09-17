@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 	<head>
@@ -214,4 +215,222 @@
 
 		</div><!-- wrap ::: end -->
 	</body>
+=======
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="중남미 아프리카 오세아니아 여행전문 채널">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="여행채널">
+        <meta property="og:description" content="중남미 아프리카 오세아니아 여행전문 채널">
+        <meta property="og:image" content="http://www.tour-channel.com">
+        <meta property="og:url" content="http://www.tour-channel.com">
+        <script type="text/javascript" src="js/contract.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+        <title>여행채널</title>
+
+		<link href="css/africa_sub.css" type="text/css" rel="stylesheet" />
+		<link href="css/header.css" type="text/css" rel="stylesheet" />
+		<link href="css/footer.css" type="text/css" rel="stylesheet" />
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#sub_tab img").click(function() {
+					$("#sub_tab img").each(function() { $(this).attr("src", $(this).attr("src").replace("_on", "_off")); });	// 이미지 off 처리
+					var idx = $("#sub_tab img").index(this);	// 선택된 li 인덱스값을 가져옴.
+					$("#sub_tab img").eq(idx).attr("src", $("#sub_tab img").eq(idx).attr("src").replace("_off", "_on"));	// 선택된 메뉴 이미지 on으로 바뀜
+				});
+				//----------- lnb 메뉴 타이틀 바꾸기 --------------------------
+				$("#lnb").html(""); //lnb안에 있는 html 태그 비우기
+				var html = "<ul>";
+				for (i=0 ; i < menu[2].length ; i++) {
+					html += "<li id='tabBtn0' class='";
+					if (i == 0) {
+						html +="fontLnb_on'>"  + menu[2][i];
+					}
+					else {
+						html += "fontLnb_off'><a href='#'>" + menu[2][i] + "</a>";
+					}
+					html += "</li>";
+				}
+				html += "</ul>";
+				//alert(html);
+				$("#lnb").html(html);
+
+				//-------------center 타이틀/가격/설명 바꾸기 ----------------------------
+				$("#centerTitle").html(menu[2][0]);
+				$("#detail").html(content[2][0] + "</br></br><strong class='priceBig'>" + price[2][0] + "</strong>&nbsp;" );
+
+				//-------------slogan 바꾸기 --------------------------------------------
+				//	$("#subTitle").html('src="images/slogan' + slogan[2] +".png" );
+				});
+				showTable = function(eleID) {
+				$('div[id *= "tabPage"]').css("display", "none"); /* div에서 id가 "tabPage"로 시작되는 요소는 보이지 않게 처리 */
+				$("#" + eleID).show();  /* onclick 이벤트시 아이디값 받은거를 보이도록 처리 */
+			}
+		</script>
+
+	</head>
+	<body>
+		<div id="wrap"><!-- wrap ::: start -->
+
+			<div id="header"><!-- header ::: start -->
+				<div id="logo"><a href="index.html"><img src="images/logo.png" width="154" height="37" alt="Tour Channel" /></a></div>
+				<div id="gnb">
+					<ul>
+						<li><a href="america.html?gnb=0"><img src="images/gnb0_merica_off.png" width="151" height="31" alt="CENTRAL AMERICA" /></a></li>
+						<li><a href="africa.html?gnb=1"><img src="images/gnb1_africa_off.png" width="58" height="30" alt="AFRICA" /></a></li>
+						<li><a href="pacific.html?gnb=2"><img src="images/gnb2_pacific_off.png" width="63" height="30" alt="PACIFIC" /></a></li>
+					</ul>
+				</div>
+
+				<div id="snb">
+					<ul>
+						<li><a href="about.html"><img src="images/snb0_about_off.png" width="150" height="35" alt="ABOUT" /></a></li>
+						<li><a href="support.html"><img src="images/snb1_support_off.png" width="221" height="35" alt="여행상품 문의전화" /></a></li>
+					</ul>
+				</div>
+
+				<div id="logoKor"><img src="images/logo_kor.png" width="60" height="57" alt="여행채널" /></div>
+			</div><!-- header ::: end -->
+
+			<div id="bodyer"><!-- bodyer ::: start -->
+
+				<div id="content">
+					<span class="path">HOME / PACIFIC</span>
+					<img id="title" src="images/title_pacific.png" width="67" height="15" alt="" />
+					<img id="subTitle" src="images/slogan_pacific.png" width="509" height="21" alt="아름답고 신비로운 지상낙원 '남태평양'의 멋과 낭만을 즐겨보세요" />
+
+					<!--<p id="subTitle">살아있는 아프리카를 몸과 마음으로 직접 느끼고 경험해보세요</p>-->
+					<br />
+
+					<!--Left--------------------------------------------------------------->
+
+					<div id="lnb">
+						<ul>
+							<li id="tabBtn0" class="fontLnb_on"><a href="#">SA연합 아프리카<br />6개국 15일</a></li>
+							<li id="tabBtn1" class="fontLnb_off"><a href="#">SA연합 아프리카<br />4개국 8일</a></li>
+							<li id="tabBtn2" class="fontLnb_off"><a href="#">남아공<br />허니문 7일</a></li>
+							<li id="tabBtn3" class="fontLnb_off"><a href="#">캐냐사파리<br />허니문 7일</a></li>
+						</ul>
+					</div>
+
+
+					<!--Center--------------------------------------------------------------->
+
+					<div id="center">
+						<p class="fontCenterTitle" id="centerTitle">SA연합 아프리카<br />6개국 15일</p>
+						<p id="detail" class="fontBasic fontSmall_13px">아프리카 관광에서 빼 놓을수 없는 지역들인 6개국 케냐, 탄자니아, 짐바브웨, 잠비아, 보츠와나, 남아공을 15일 동안 한번에 여행할수있는 명품 상품입니다.<br /><br />
+						<strong id="price" class="priceBig">6,990,000</strong>&nbsp;원</p>
+						<div class="underline"></div>
+					</div>
+
+					<!--Right--------------------------------------------------------------->
+					<div id="tab">
+						<div id="sub_tab">
+							<img class="hand" src="images/tab0_goods_on.png" width="151" height="31" alt="상품소개" onclick="showTable('tabPage0');" /><!--
+							--><img class="hand" src="images/tab1_price_off.png" width="151" height="31" alt="가격 및 일정표" onclick="showTable('tabPage1');"/><!--
+							--><img class="hand" src="images/tab2_gallery_off.png" width="151" height="31" alt="포토갤러리" onclick="showTable('tabPage2');"/><!--
+							--><img class="hand" src="images/tab3_inquire_off.png" width="151" height="31" alt="견적문의" onclick="showTable('tabPage3');"/>
+						</div>
+
+						<!--tab0 : 상품소개-->
+						<div id="tabPage0">
+							<img class="tabTopImg" src="images/sub2_t0_img.png" width="604" height="90" alt="" />
+							<img class="tabSubT" src="images/title_visitArea.png" width="44" height="12" alt="방문지역" />
+							<p class="fontSmall_12px">크라이스트처치(1)/더니든(1)/퀸스타운(1)/밀포드사운드/퀸스타운(2)/마운트쿡/크라이스트처치</p>
+							<img class="tabSubT" src="images/title_goodsChar.png" width="45" height="12" alt="상품특징" />
+							<div class="goodsList fontSmall_12px">
+								<ul>
+									<li>Track & Train 투어는 퀸스타운의 역사적인 코스를 연결해서 관광하는 흔하지 않는 Oneway 투어이다. 스코틀랜드풍이 매혹적인 더니든과 흥미진진한 액티비티가 풍부한 퀸스타운을 연결하는 투어에서 타이에리 협곡 열차는 19세기 말 건설된 역사적인 철로 위를 달리는 기차이다. 12개 이상의 바위산과 강 위에 만들어진 철길은 10개의 터널을 통과하고 있기 때문에 차장 밖으로 보이는 풍경들은 스릴이 넘친다. 타이에리 강을 지나는 높이 50m의 철교 위에서는 잠시 멈추어 사진 촬영하는 시간도 준다. ‘천국의 언덕’이라 불리는 해발250m의 Pukerangi까지만 기차가 운행하고 Pukerangi부터 퀸스타운까지는 버스를 타고 이동한다.</li>
+								</ul>
+								<img class="tab_imgR" src="images/sub2_t0_imgR.png" width="228" height="191" alt="" />
+							</div><!--tab0 : 상품소개 End-->
+						</div>
+
+						<!--tab1 : 가격 및 일정표-->
+						<div id="tabPage1" class="hidden fontSmall_12px">
+							<img class="tabTopImg" src="images/sub2_t1_img.png" width="604" height="180" alt="" /><br /><br />
+							<div>
+								<img src="images/title_inclusion.png" width="46" height="13" alt="포함사항" />
+								<ul>
+									<li>전일정 교통 패스 (크라이스트처치-더니든/퀸스타운-밀포드사운드-퀸스타운/퀸스타운-마운트쿡-크라이스트처치)</li>
+									<li>Accomodaiton: 전 지역 YHA 또는 백팩커스 (도미터리 - 다인실 기준)</li>
+									<li>밀포드 사운드 크루즈 탑</li>
+									<li>Skyline Gondola + Luge 1회 탑승권</li>
+									<li>더니든과 퀸스타운을 이어주는 아름다운 협곡열차, 타이에리 기차 + 코치이동 서비스</li>
+								</ul>
+							</div>
+							<div class="clear"></div>
+							<br />
+							<div>
+								<img src="images/title_exclusion.png" width="57" height="13" alt="불포함사항" />
+								<ul>
+									<li>식사, 국제선 및 국내선 항공</li>
+								</ul>
+							</div>
+							<div class="clear"></div>
+							<br />
+							<img src="images/title_schedule.png" width="44" height="12" alt="" /><br />
+								<ul>
+									<li><a href="pacific_schedule0.html" onclick="window.open(this.href, 'popup1', 'width=745 height=540 scrollbars=1', 'location=no'); return false;" target="_blank"><strong>&gt;&gt;&gt; 일정 자세히보기 Click &lt;&lt;&lt;&lt;</strong></a></li>
+								</ul>
+						</div>
+
+						<!--tab2 : 포토갤러리-->
+						<div id="tabPage2" class="hidden">
+							<img id="bigPhoto" src="images/sub2_t2_img0_big.png" width="519" height="299" alt="" />
+							<ul>
+								<li><img src="images/sub2_t2_img0_s.png" width="80" height="58" alt="" /></li>
+								<li><img src="images/sub2_t2_img1_s.png" width="80" height="58" alt="" /></li>
+								<li><img src="images/sub2_t2_img2_s.png" width="80" height="58" alt="" /></li>
+								<li><img src="images/sub2_t2_img3_s.png" width="80" height="58" alt="" /></li>
+								<li><img src="images/sub2_t2_img4_s.png" width="80" height="58" alt="" /></li>
+							</ul>
+							<br class="clear" />
+							<p class="fontSmall_12px clearFloat">사파리를 위해 특별히 관광객들이 일어나서 바깥을 볼 수 있도록 개조된 지프를 타고 아프리카 초원의 곳곳을 누비게 됩니다. 아프리카 사파리 전문 드라이버가 Peo Pole, 천천히 국립공원 내를 드라이브 하다 보면 가까이서 사자를 찍을 행운도 잡을수 있습니다. 사파리 차량을 타고 아프리카 대륙을 달리는 기분, 유쾌!! 상쾌!! 통쾌!! 합니다.</p>
+						</div>
+
+						<!--tab3 : 견적문의-->
+						<div id="tabPage3" class="hidden">
+							<div id="inputSet">
+								<dl>
+									<dt><img src="images/title_writer.png" width="35" height="12" alt="" /></dt>
+									<dd><input type="text" id="writer" /></dd>
+								</dl>
+								<dl>
+									<dt><img src="images/title_phone.png" width="33" height="12" alt="" /></dt>
+									<dd><input type="text" id="phone" /></dd>
+								</dl>
+								<dl>
+									<dt><img src="images/title_email.png" width="33" height="12" alt="" /></dt>
+									<dd><input type="text" id="email" /></dd>
+								</dl>
+								<dl>
+									<dt><img src="images/title_content.png" width="46" height="13" alt="" /></dt>
+									<!--<dd><input type="text" id="contents" /></dd>-->
+									<dd><textarea id="inputArea" rows="" cols=""></textarea></dd>
+								</dl>
+							</div>
+							<input id="btn_send" type="button" value="보내기" onclick="" />
+							<!--inputSet End-->
+						</div>
+
+					</div><!--tab End-->
+
+				</div>
+
+			</div><!-- bodyer ::: end -->
+
+			<div id="footer"><!-- footer ::: start -->
+				<img id="address" src="images/footer_adress.png" width="688" height="24" alt="" />
+				<img id="copyright" src="images/footer_copyright.png" width="196" height="12" alt="" />
+			</div><!-- footer ::: end -->
+
+		</div><!-- wrap ::: end -->
+	</body>
+>>>>>>> 85137d17a350113a888ccfa82b5a61e741c15bc4
 </html>
