@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="중남미 아프리카 오세아니아 여행전문 채널">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="여행채널">
+        <meta property="og:description" content="중남미 아프리카 오세아니아 여행전문 채널">
+        <meta property="og:image" content="http://www.tour-channel.com">
+        <meta property="og:url" content="http://www.tour-channel.com">
+        <script type="text/javascript" src="js/contract.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+        <title>여행채널</title>
+
+		<link href="css/africa_sub.css" type="text/css" rel="stylesheet" />
+		<link href="css/header.css" type="text/css" rel="stylesheet" />
+		<link href="css/footer.css" type="text/css" rel="stylesheet" />
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#sub_tab img").click(function() {
+					$("#sub_tab img").each(function() { $(this).attr("src", $(this).attr("src").replace("_on", "_off")); });	// 이미지 off 처리
+					var idx = $("#sub_tab img").index(this);	// 선택된 li 인덱스값을 가져옴.
+					$("#sub_tab img").eq(idx).attr("src", $("#sub_tab img").eq(idx).attr("src").replace("_off", "_on"));	// 선택된 메뉴 이미지 on으로 바뀜
+				});
+				//----------- lnb 메뉴 타이틀 바꾸기 --------------------------
+				$("#lnb").html(""); //lnb안에 있는 html 태그 비우기
+				var html = "<ul>";
+				for (i = 0 ; i < menu[0].length ; i++) {
+					html += "<li id='tabBtn0' class='";
+					if (i == 0) {
+						//html +="fontLnb_on'>"  + menu[0][i];
+						html +="fontLnb_on'>"  + menu[0][i];
+					}
+					else {
+						html += "fontLnb_off'><a href='#'>" + menu[0][i] + "</a>";
+					}
+					html += "</li>";
+				}
+				html += "</ul>";
+				//alert(html);
+				$("#lnb").html(html);
+
+				//-------------center 타이틀/가격/설명 바꾸기 ----------------------------
+				$("#centerTitle").html(menu[0][0]);
+				$("#detail").html(content[0][0] + "</br></br><strong class='priceBig'>" + price[0][0] + "</strong>&nbsp;원" );
+
+				//-------------slogan 바꾸기 --------------------------------------------
+				//$("#subTitle").html('src="images/slogan' + slogan[0] +".png" );
+				});
+				showTable = function(eleID) {
+				$('div[id *= "tabPage"]').css("display", "none"); /* div에서 id가 "tabPage"로 시작되는 요소는 보이지 않게 처리 */
+				$("#" + eleID).show();  /* onclick 이벤트시 아이디값 받은거를 보이도록 처리 */
+			}
+		</script>
+	</head>
+	<body>
+		<div id="wrap"><!-- wrap ::: start -->
+
+			<div id="header"><!-- header ::: start -->
+				<div id="logo"><a href="index.html"><img src="images/logo.png" width="154" height="37" alt="Tour Channel" /></a></div>
+				<div id="gnb">
+					<ul>
+						<li><a href="america.html?gnb=0"><img src="images/gnb0_merica_off.png" width="151" height="31" alt="CENTRAL AMERICA" /></a></li>
+						<li><a href="africa.html?gnb=1"><img src="images/gnb1_africa_off.png" width="58" height="30" alt="AFRICA" /></a></li>
+						<li><a href="pacific.html?gnb=2"><img src="images/gnb2_pacific_off.png" width="63" height="30" alt="PACIFIC" /></a></li>
+					</ul>
+				</div>
+
+				<div id="snb">
+					<ul>
+						<li><a href="about.html"><img src="images/snb0_about_off.png" width="150" height="35" alt="ABOUT" /></a></li>
+						<li><a href="support.html"><img src="images/snb1_support_off.png" width="221" height="35" alt="여행상품 문의전화" /></a></li>
+					</ul>
+				</div>
+
+				<div id="logoKor"><img src="images/logo_kor.png" width="60" height="57" alt="여행채널" /></div>
+			</div><!-- header ::: end -->
+
+			<div id="bodyer"><!-- bodyer ::: start -->
+
+				<div id="content">
+					<span class="path">HOME / AMERICA</span>
+					<img id="title" src="images/title_america.png" width="163" height="15" alt="" />
+					<img id="subTitle" src="images/slogan_america.png" width="483" height="21" alt="태양과 정열이 그대로 살아숨쉬는 중남미의 매력을 느껴보세요" />
+					<br />
+
+					<!--Left--------------------------------------------------------------->
+
+					<div id="lnb">
+						<ul>
+							<li id="tabBtn0" class="fontLnb_on"><a href="#">SA연합 아프리카<br />6개국 15일</a></li>
+							<li id="tabBtn1" class="fontLnb_off"><a href="#">SA연합 아프리카<br />4개국 8일</a></li>
+							<li id="tabBtn2" class="fontLnb_off"><a href="#">남아공<br />허니문 7일</a></li>
+							<li id="tabBtn3" class="fontLnb_off"><a href="#">캐냐사파리<br />허니문 7일</a></li>
+						</ul>
+					</div>
+
+
+					<!--Center--------------------------------------------------------------->
+
+					<div id="center">
+						<p class="fontCenterTitle" id="centerTitle">SA연합 아프리카<br />6개국 15일</p>
+						<p id="detail" class="fontBasic fontSmall_13px">아프리카 관광에서 빼 놓을수 없는 지역들인 6개국 케냐, 탄자니아, 짐바브웨, 잠비아, 보츠와나, 남아공을 15일 동안 한번에 여행할수있는 명품 상품입니다.<br /><br />
+						<strong id="price" class="priceBig">6,990,000</strong>&nbsp;원</p>
+						<div class="underline"></div>
+					</div>
+
+					<!--Right--------------------------------------------------------------->
+					<div id="tab">
+						<div id="sub_tab">
+							<img class="hand" src="images/tab0_goods_on.png" width="151" height="31" alt="상품소개" onclick="showTable('tabPage0');" /><!--
+							--><img class="hand" src="images/tab1_price_off.png" width="151" height="31" alt="가격 및 일정표" onclick="showTable('tabPage1');"/><!--
+							--><img class="hand" src="images/tab2_gallery_off.png" width="151" height="31" alt="포토갤러리" onclick="showTable('tabPage2');"/><!--
+							--><img class="hand" src="images/tab3_inquire_off.png" width="151" height="31" alt="견적문의" onclick="showTable('tabPage3');"/>
+						</div>
+
+						<!--tab0 : 상품소개-->
+						<div id="tabPage0">
+							<img class="tabTopImg" src="images/sub0_t0_img.png" width="604" height="90" alt="" />
+							<img class="tabSubT" src="images/title_visitArea.png" width="44" height="12" alt="방문지역" />
+							<p class="fontSmall_12px">인천-로스앤젤레스경유-상파울로-리오데자네이로-이과수-부에노스아이레스-리마-꾸즈꼬-리마-산호세경유-멕시코시티-칸쿤-로스앤젤레스 경유-인천</p>
+							<img class="tabSubT" src="images/title_goodsChar.png" width="45" height="12" alt="상품특징" />
+							<div class="goodsList fontSmall_12px">
+								<ul>
+									<li>1. 상품의 특징 </li>
+									<li>A. 우리나라 국적기인 대한항공으로 상파울로까지 편한 여행을 시작하실 수 있습니다. </li>
+									<li>B. 한번에 중남미의 핵심(브라질, 아르헨티나, 페루, 멕시코)을 여유롭게 볼 수 있는 알찬 상품입니다.</li>	
+								</ul>
+							<!--	<img class="tab_imgR" src="images/sub0_t0_imgR.png" width="228" height="191" alt="" />-->
+							</div><!--tab0 : 상품소개 End-->
+						</div>
+
+						<!--tab1 : 가격 및 일정표-->
+						<div id="tabPage1" class="hidden fontSmall_12px">
+							<img class="tabTopImg" src="images/sub0_t1_img.png" width="604" height="180" alt="" /><br /><br />
+							<div>
+								<img src="images/title_inclusion.png" width="46" height="13" alt="포함사항" />
+								<ul>
+									<li> 유류할증료 포함</li>
+									<li> 일정상의 항공료</li>
+									<li> 호텔(2인 1실 기준)</li>
+									<li> 식사</li>
+									<li> 일정상의 관광 입장료</li>
+									<li> 해외 여행자 1억원 보험료</li>
+									<li> 인천공항세 및 출국세, 현지 중남미 공항세</li>
+									<li> 기사, 가이드, 인솔자 팁 포함</li>
+								</ul>
+							</div>
+							<div class="clear"></div>
+							<br />
+							<div>
+								<img src="images/title_exclusion.png" width="57" height="13" alt="불포함사항" />
+								<ul>
+									<li>호텔의 룸메이드 팁, 식당 팁 및 물값 불포함, 기타 개인 제반비용</li>
+								</ul>
+							</div>
+							<div class="clear"></div>
+							<br />
+							<img src="images/title_schedule.png" width="44" height="12" alt="" /><br />
+								<ul>
+									<li><a href="america_schedule0.html" onclick="window.open(this.href, 'popup1', 'width=750 height=540 scrollbars=1', 'location=no'); return false;" target="_blank"><strong>&gt;&gt;&gt; 일정 자세히보기 Click &lt;&lt;&lt;&lt;</strong></a></li>
+								</ul>
+						</div>
+
+						<!--tab2 : 포토갤러리-->
+						<div id="tabPage2" class="hidden">
+							<img id="bigPhoto" src="images/sub0_t2_img0_big.png" width="519" height="299" alt="" />
+
+							<ul>
+								<li><img src="images/sub0_t2_img0_s.png" width="80" height="58" alt="" /></li>
+								<li><img src="images/sub0_t2_img1_s.png" width="80" height="58" alt="" /></li>
+								<li><img src="images/sub0_t2_img2_s.png" width="80" height="58" alt="" /></li>
+								<li><img src="images/sub0_t2_img3_s.png" width="80" height="58" alt="" /></li>
+								<li><img src="images/sub0_t2_img4_s.png" width="80" height="58" alt="" /></li>
+							</ul>
+							<br class="clear" />
+							<!--<p class="fontSmall_12px clearFloat">
+							◆ 차량 및 특전사항 ◆ 
+							<ul class="fontSmall_12px">
+								<li>- 15명/대형버스 전 일정 한국인 가이드가 동행</li>
+								<li>- 페루 풀리지 않는 신비 "나스카 지상 그림" 포함</li>
+								<li>- 세계 문화 유산 "우루과이 콜로니아 델 새크라멘토 역사지구" 포함 </li>
+								<li>- 세계적인 휴양지 칸쿤에서 자유로운 일정</li>
+								<li>- 한진관광 전문 인솔자 동행</li>
+							</ul>
+							
+							</p>-->
+						</div>
+
+						<!--tab3 : 견적문의-->
+						<div id="tabPage3" class="hidden">
+							<div id="inputSet">
+								<dl>
+									<dt><img src="images/title_writer.png" width="35" height="12" alt="" /></dt>
+									<dd><input type="text" id="writer" /></dd>
+								</dl>
+								<dl>
+									<dt><img src="images/title_phone.png" width="33" height="12" alt="" /></dt>
+									<dd><input type="text" id="phone" /></dd>
+								</dl>
+								<dl>
+									<dt><img src="images/title_email.png" width="33" height="12" alt="" /></dt>
+									<dd><input type="text" id="email" /></dd>
+								</dl>
+								<dl>
+									<dt><img src="images/title_content.png" width="46" height="13" alt="" /></dt>
+									<!--<dd><input type="text" id="contents" /></dd>-->
+									<dd><textarea id="inputArea" rows="" cols=""></textarea></dd>
+								</dl>
+							</div>
+							<input id="btn_send" type="button" value="보내기" onclick="" />
+							<!--inputSet End-->
+						</div>
+
+					</div><!--tab End-->
+
+				</div>
+
+			</div><!-- bodyer ::: end -->
+
+			<div id="footer"><!-- footer ::: start -->
+				<img id="address" src="images/footer_adress.png" width="688" height="24" alt="" />
+				<img id="copyright" src="images/footer_copyright.png" width="196" height="12" alt="" />
+			</div><!-- footer ::: end -->
+
+		</div><!-- wrap ::: end -->
+	</body>
+</html>
